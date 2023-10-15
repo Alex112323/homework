@@ -16,12 +16,16 @@ public final class Main {
         // IntelliJ IDEA suggests fixing it.
         LOGGER.info("Hello and welcome!");
 
-        // Press Shift+F10 or click the green arrow button in the gutter to run the code.
+        // Press Shift+F10 or click  the green arrow button in the gutter to run the code.
         for (int i = 0; i <= 2; i++) {
 
             // Press Shift+F9 to start debugging your code. We have set one breakpoint
             // for you, but you can always add more by pressing Ctrl+F8.
             LOGGER.info("i = {}", i);
         }
+        Task5 task5 = new Task5();
+        LOGGER.info(task5.descendant("11211230"));
+
     }
+
 }
