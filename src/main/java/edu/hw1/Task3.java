@@ -1,5 +1,6 @@
 package edu.hw1;
 
+
 public class Task3 {
     public boolean isNestable(int[] numsFirst, int[] numsSecond) {
         if (numsFirst.length == 0 || numsSecond.length == 0) {
