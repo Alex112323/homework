@@ -5,28 +5,28 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class Task2Test {
     @Test
-    void countDigits_1() {
+    void countDigitsFourDigitNumber() {
         Task2 task2 = new Task2();
         int number = 4666;
         int response = task2.countDigits(number);
         assertEquals(4, response);
     }
     @Test
-    void countDigits_2() {
+    void countDigitsThreeDigitNumber() {
         Task2 task2 = new Task2();
         int number = 544;
         int response = task2.countDigits(number);
         assertEquals(3, response);
     }
     @Test
-    void countDigits_3() {
+    void countDigitsExampleWithZero() {
         Task2 task2 = new Task2();
         int number = 0;
         int response = task2.countDigits(number);
         assertEquals(1, response);
     }
     @Test
-    void countDigits_4() {
+    void countDigitsNegativeNumber() {
         Task2 task2 = new Task2();
         int number = -248;
         int response = task2.countDigits(number);

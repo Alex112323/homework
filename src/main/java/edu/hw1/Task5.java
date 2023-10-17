@@ -6,16 +6,12 @@ public class Task5 {
         while (true) {
             if (isPalindrome(stringNumber)) {
                 return true;
+            } else if (stringNumber.length() % 2 != 0) {
+                return false;
+            } else if (descendant(stringNumber).length() >= 2) {
+                stringNumber = descendant(stringNumber);
             } else {
-                if (stringNumber.length() % 2 == 0) {
-                    if (descendant(stringNumber).length() < 2) {
-                        return false;
-                    } else {
-                        stringNumber = descendant(stringNumber);
-                    }
-                } else {
-                    return false;
-                }
+                return false;
             }
         }
     }
@@ -30,13 +26,13 @@ public class Task5 {
     }
 
     public String descendant(String stringNumber) {
-        String newStringNumber = "";
+        StringBuilder newStringNumber = new StringBuilder();
         for (int i = 0; i < stringNumber.length(); i += 2) {
             int sumOfTwoDigits = Integer.parseInt("" + stringNumber.charAt(i))
                 + Integer.parseInt("" + stringNumber.charAt(i + 1));
-            newStringNumber += Integer.toString(sumOfTwoDigits);
+            newStringNumber.append(sumOfTwoDigits);
         }
-        return newStringNumber;
+        return newStringNumber.toString();
     }
 
 }

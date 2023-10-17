@@ -3,6 +3,9 @@ package edu.hw1;
 import java.util.Arrays;
 
 public class Task6 {
+    private final static int KAPREKARA = 6174;
+    private final static int TEN = 10;
+
     public int countK(Integer number) {
         int count = 0;
         int copyOfNumber = number;
@@ -11,8 +14,6 @@ public class Task6 {
         if (copyOfNumber <= THOUSAND) {
             return -1;
         }
-        final int TEN = 10;
-        final int KAPREKARA = 6174;
         while (copyOfNumber != KAPREKARA) {
             int[] arrOfDigits = new int[stringNumber.length()];
             int index = 0;

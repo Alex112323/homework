@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>education</groupId>
-    <artifactId>essentials</artifactId>
+    <artifactId>homework</artifactId>
     <version>${revision}</version>
     <packaging>jar</packaging>
 
@@ -59,7 +59,7 @@
             <dependency>
                 <groupId>org.junit</groupId>
                 <artifactId>junit-bom</artifactId>
-                <version>5.10.0</version>
+                <version>${junit.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
@@ -92,10 +92,11 @@
         <dependency>
             <groupId>org.assertj</groupId>
             <artifactId>assertj-core</artifactId>
-            <version>3.24.2</version>
+            <version>${assertj.version}</version>
             <scope>test</scope>
         </dependency>
     </dependencies>
+
     <build>
         <plugins>
             <plugin>
