@@ -7,7 +7,7 @@ import static org.junit.jupiter.api.Assertions.*;
 class Task8Test {
 
     @Test
-    void knightBoardCaptureFiguresDontContact() {
+    void knight_Board_Capture_Figures_Dont_Contact() {
         Task8 task8 = new Task8();
         int[][] array = {
             {0, 0, 0, 1, 0, 0, 0, 0},
@@ -22,7 +22,7 @@ class Task8Test {
         assertTrue(response);
     }
     @Test
-    void knightBoardCaptureFiguresHaveContact() {
+    void knight_Board_Capture_Figures_Have_Contact() {
         Task8 task8 = new Task8();
         int[][] array = {
             {1, 0, 1, 0, 1, 0, 1, 0},
@@ -37,7 +37,7 @@ class Task8Test {
         assertFalse(response);
     }
     @Test
-    void knightBoardCaptureFiguresContact() {
+    void knight_Board_Capture_Figures_Contact() {
         Task8 task8 = new Task8();
         int[][] array = {
             {0, 0, 0, 0, 1, 0, 0, 0},
@@ -52,7 +52,7 @@ class Task8Test {
         assertFalse(response);
     }
     @Test
-    void knightBoardCaptureFiguresNotContact() {
+    void knight_Board_Capture_Figures_Not_Contact() {
         Task8 task8 = new Task8();
         int[][] array = {
             {1, 0, 0, 1, 0, 0, 1, 0},
