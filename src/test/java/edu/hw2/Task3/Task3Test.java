@@ -19,7 +19,7 @@ public class Task3Test {
     @Test
     void GetConnection() {
         PopularCommandExecutor executor =
-            new PopularCommandExecutor(new FaultyConnectionManager(), 2);
+            new PopularCommandExecutor(new FaultyConnectionManager(), 1);
         boolean executed;
         try {
             executor.updatePackages();
