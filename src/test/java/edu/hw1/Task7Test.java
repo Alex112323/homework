@@ -7,7 +7,7 @@ import static org.junit.jupiter.api.Assertions.*;
 class Task7Test {
 
     @Test
-    void rotateRightShiftByOne() {
+    void rotate_Right_Shift_By_One() {
         Task7 task7 = new Task7();
         Integer number = 8;
         Integer shift = 1;
@@ -15,7 +15,7 @@ class Task7Test {
         assertEquals("0100",response);
     }
     @Test
-    void rotateRightNegativeNumber() {
+    void rotate_Right_Negative_Number() {
         Task7 task7 = new Task7();
         Integer number = -2;
         Integer shift = 1;
@@ -23,7 +23,7 @@ class Task7Test {
         assertEquals("-1",response);
     }
     @Test
-    void rotateRightZero() {
+    void rotate_Right_Zero() {
         Task7 task7 = new Task7();
         Integer number = 0;
         Integer shift = 3;
@@ -31,7 +31,7 @@ class Task7Test {
         assertEquals("0",response);
     }
     @Test
-    void rotateRightDigitPassesSeveralCircles() {
+    void rotate_Right_Digit_Passes_Several_Circles() {
         Task7 task7 = new Task7();
         Integer number = 21;
         Integer shift = 46;
@@ -40,7 +40,7 @@ class Task7Test {
     }
 
     @Test
-    void rotateLeftShiftByOne() {
+    void rotate_Left_Shift_By_One() {
         Task7 task7 = new Task7();
         Integer number = 16;
         Integer shift = 1;
@@ -48,7 +48,7 @@ class Task7Test {
         assertEquals("00001",response);
     }
     @Test
-    void rotateLeftShiftByTwo() {
+    void rotate_Left_Shift_By_Two() {
         Task7 task7 = new Task7();
         Integer number = 17;
         Integer shift = 2;
@@ -56,7 +56,7 @@ class Task7Test {
         assertEquals("00110",response);
     }
     @Test
-    void rotateLeftNegativeNumber() {
+    void rotate_Left_Negative_Number() {
         Task7 task7 = new Task7();
         Integer number = -2;
         Integer shift = 2;
@@ -64,7 +64,7 @@ class Task7Test {
         assertEquals("-1",response);
     }
     @Test
-    void rotateLeftZeroAndNegativeShift() {
+    void rotate_Left_Zero_And_Negative_Shift() {
         Task7 task7 = new Task7();
         Integer number = 0;
         Integer shift = -2;
@@ -72,7 +72,7 @@ class Task7Test {
         assertEquals("0",response);
     }
     @Test
-    void rotateLeftDigitPassesSeveralCircles() {
+    void rotate_Left_Digit_Passes_Several_Circles() {
         Task7 task7 = new Task7();
         Integer number = 18;
         Integer shift = 15;
