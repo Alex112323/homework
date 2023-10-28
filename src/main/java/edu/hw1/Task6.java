@@ -5,12 +5,12 @@ import java.util.Arrays;
 public class Task6 {
     private final static int KAPREKARA = 6174;
     private final static int TEN = 10;
+    private final static int THOUSAND = 1000;
 
     public int countK(Integer number) {
         int count = 0;
         int copyOfNumber = number;
         String stringNumber = Integer.toString(copyOfNumber);
-        final int THOUSAND = 1000;
         if (copyOfNumber <= THOUSAND) {
             return -1;
         }
@@ -23,14 +23,15 @@ public class Task6 {
                 index += 1;
             }
             Arrays.sort(arrOfDigits);
-            String stringNumberMax = "";
-            String stringNumberMin = "";
+            StringBuilder stringNumberMax = new StringBuilder();
+            StringBuilder stringNumberMin = new StringBuilder();
             for (int i = 0; i < stringNumber.length(); i++) {
-                stringNumberMax += Integer.toString(arrOfDigits[stringNumber.length() - 1 - i]);
-                stringNumberMin += Integer.toString(arrOfDigits[i]);
+                stringNumberMax.append(arrOfDigits[stringNumber.length() - 1 - i]);
+                stringNumberMin.append(arrOfDigits[i]);
             }
             count += 1;
-            copyOfNumber = Integer.parseInt((stringNumberMax)) - Integer.parseInt(stringNumberMin);
+            copyOfNumber = Integer.parseInt((stringNumberMax.toString()))
+                - Integer.parseInt(stringNumberMin.toString());
         }
         return count;
     }
