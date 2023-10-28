@@ -1,4 +1,4 @@
-package edu.hw1;
+package edu.hw2.Task1;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -23,8 +23,6 @@ public final class Main {
             // for you, but you can always add more by pressing Ctrl+F8.
             LOGGER.info("i = {}", i);
         }
-        Task5 task5 = new Task5();
-        LOGGER.info(task5.descendant("11211230"));
 
     }
 
