@@ -15,7 +15,7 @@ class Task1Test {
             "003:20, 200",
             "1234, -1"
     })
-    void minutes_To_Seconds(String string, int correctAnswer) {
+    void minutesToSeconds_1(String string, int correctAnswer) {
         Task1 task1 = new Task1();
         int response = task1.minutesToSeconds(string);
         assertEquals(correctAnswer, response);

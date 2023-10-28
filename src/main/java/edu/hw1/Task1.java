@@ -13,8 +13,9 @@ public class Task1 {
             int minutes = Integer.parseInt(stringMinutes);
             if (minutes >= 0 && seconds >= 0 && seconds < 60) {
                 return minutes * 60 + seconds;
+            } else {
+                return -1;
             }
-            return -1;
         } catch (Exception e) {
             return -1;
         }

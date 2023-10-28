@@ -6,7 +6,7 @@ import static org.junit.jupiter.api.Assertions.*;
 class Task3Test {
 
     @Test
-    void is_Nestable_Standart_True_Example() {
+    void isNestableStandartTrueExample() {
         Task3 task3 = new Task3();
         int[] numsFirst = {1,2,3,4};
         int[] numsSecond = {0,6};
@@ -14,7 +14,7 @@ class Task3Test {
         assertTrue(response);
     }
     @Test
-    void is_Nestable_Second_Standart_True_Example() {
+    void isNestableSecondStandartTrueExample() {
         Task3 task3 = new Task3();
         int[] numsFirst = {3,1};
         int[] numsSecond = {4,0};
@@ -22,7 +22,7 @@ class Task3Test {
         assertTrue(response);
     }
     @Test
-    void is_Nestable_Equality_Of_Minimums() {
+    void isNestableEqualityOfMinimums() {
         Task3 task3 = new Task3();
         int[] numsFirst = {9,9,8};
         int[] numsSecond = {8,9};
@@ -30,7 +30,7 @@ class Task3Test {
         assertFalse(response);
     }
     @Test
-    void is_Nestable_Standart_False_Example() {
+    void isNestableStandartFalseExample() {
         Task3 task3 = new Task3();
         int[] numsFirst = {1,2,3,4};
         int[] numsSecond = {2,3};
@@ -38,7 +38,7 @@ class Task3Test {
         assertFalse(response);
     }
     @Test
-    void is_Nestable_Empty_One_Array() {
+    void isNestableEmptyOneArray() {
         Task3 task3 = new Task3();
         int[] numsFirst = {};
         int[] numsSecond = {2,3};
@@ -46,7 +46,7 @@ class Task3Test {
         assertFalse(response);
     }
     @Test
-    void is_Nestable_Empty_Two_Arrays() {
+    void isNestableEmptyTwoArrays() {
         Task3 task3 = new Task3();
         int[] numsFirst = {};
         int[] numsSecond = {};

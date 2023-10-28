@@ -6,11 +6,11 @@ public class Task7 {
             return "-1";
         }
         String binaryString = Integer.toBinaryString(number);
-        StringBuilder newNumber = new StringBuilder();
+        String newNumber = "";
         for (int i = 0; i < binaryString.length(); i++) {
-            newNumber.append(binaryString.charAt(moduleOfNumber(i - shift, binaryString.length())));
+            newNumber += binaryString.charAt(moduleOfNumber(i - shift, binaryString.length()));
         }
-        return newNumber.toString();
+        return newNumber;
     }
 
     public String rotateLeft(Integer number, Integer shift) {
@@ -18,11 +18,11 @@ public class Task7 {
             return "-1";
         }
         String binaryString = Integer.toBinaryString(number);
-        StringBuilder newNumber = new StringBuilder();
+        String newNumber = "";
         for (int i = 0; i < binaryString.length(); i++) {
-            newNumber.append(binaryString.charAt(moduleOfNumber(i + shift, binaryString.length())));
+            newNumber += binaryString.charAt(moduleOfNumber(i + shift, binaryString.length()));
         }
-        return newNumber.toString();
+        return newNumber;
     }
 
     public int moduleOfNumber(Integer number, Integer module) {
