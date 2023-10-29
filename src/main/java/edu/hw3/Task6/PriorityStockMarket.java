@@ -1,0 +1,28 @@
+package edu.hw3.Task6;
+
+import java.util.Comparator;
+import java.util.PriorityQueue;
+
+public class PriorityStockMarket implements StockMarket {
+    private PriorityQueue<Stock> priorityQueue;
+
+    public PriorityStockMarket() {
+        Comparator<Stock> cmp = (o1, o2) -> o2.getPrice().compareTo(o1.getPrice());
+        this.priorityQueue = new PriorityQueue<>(cmp);
+    }
+
+    @Override
+    public void add(Stock stock) {
+        priorityQueue.add(stock);
+    }
+
+    @Override
+    public void remove(Stock stock) {
+        priorityQueue.remove(stock);
+    }
+
+    @Override
+    public Stock mostValuableStock() {
+        return priorityQueue.peek();
+    }
+}
