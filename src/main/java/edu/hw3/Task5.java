@@ -17,7 +17,6 @@ public class Task5 {
     }
 
     public Task5(String name) {
-        String[] splittedName = name.split(" ");
         firstName = name.split(" ")[0];
         if (name.split(" ").length > 1) {
             lastName = name.split(" ")[1];

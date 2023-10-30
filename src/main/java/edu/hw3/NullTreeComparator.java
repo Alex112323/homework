@@ -4,10 +4,10 @@ import java.util.Comparator;
 
 public class NullTreeComparator implements Comparator<String> {
     @Override
-    public int compare(String o1, String o2) {
-        if (o1 == null || o2 == null) {
+    public int compare(String objectFirst, String objectSecond) {
+        if (objectFirst == null || objectSecond == null) {
             return 0;
         }
-        return compare(o1, o2);
+        return compare(objectFirst, objectSecond);
     }
 }

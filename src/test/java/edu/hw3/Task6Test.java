@@ -7,13 +7,13 @@ import static org.junit.jupiter.api.Assertions.*;
 
 public class Task6Test {
     @Test
-    void stockTest() {
+    void stock_Test() {
         Stock stock1 = new Stock("1", 1);
         Stock stock2 = new Stock("1", 1);
         assertEquals(stock1, stock2);
     }
     @Test
-    void prioriteStockMarket(){
+    void priority_Stock_Market(){
         PriorityStockMarket stockMarket = new PriorityStockMarket();
         stockMarket.add(new Stock("stock1", 1));
         Stock stock8 = new Stock("stock6", 6);
