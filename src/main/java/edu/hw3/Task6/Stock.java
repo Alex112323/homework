@@ -19,15 +19,15 @@ public class Stock {
 
     @Override
     public boolean equals(Object obj) {
-        if (!(obj instanceof Stock)) {
-            return false;
+        if (obj instanceof Stock) {
+            return name.equals(((Stock) obj).getName()) && price.equals(((Stock) obj).getPrice());
         }
 
-        return name.equals(((Stock) obj).getName()) && price.equals(((Stock) obj).getPrice());
+        return false;
     }
 
     @Override
     public int hashCode() {
-        return name.hashCode() * 10 + price.hashCode();
+        return name.hashCode() + price.hashCode();
     }
 }

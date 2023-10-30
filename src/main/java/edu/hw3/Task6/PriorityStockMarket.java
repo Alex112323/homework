@@ -7,8 +7,8 @@ public class PriorityStockMarket implements StockMarket {
     private PriorityQueue<Stock> priorityQueue;
 
     public PriorityStockMarket() {
-        Comparator<Stock> cmp = (o1, o2) -> o2.getPrice().compareTo(o1.getPrice());
-        this.priorityQueue = new PriorityQueue<>(cmp);
+        Comparator<Stock> comparator = (object1, object2) -> object2.getPrice().compareTo(object1.getPrice());
+        this.priorityQueue = new PriorityQueue<>(comparator);
     }
 
     @Override
