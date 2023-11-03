@@ -5,8 +5,29 @@ import java.util.TreeMap;
 public class Task4 {
     private final static int MAXROMAN = 3999;
 
+    public String convertToRoman(Integer number) throws Exception {
+        if (number > MAXROMAN) {
+            throw new Exception("Слишком большое число");
+        } else if (number <= 0) {
+            throw new Exception("Число меньше или равно нуля");
+        }
+        TreeMap<Integer, String> intToRoman = intToRoman();
+        int newNumber = number;
+        StringBuilder stringBuilder = new StringBuilder();
+        while (newNumber > 0) {
+            for (var element: intToRoman.descendingKeySet()) {
+                if (newNumber >= element) {
+                    newNumber -= element;
+                    stringBuilder.append(intToRoman.get(element));
+                    break;
+                }
+            }
+        }
+        return stringBuilder.toString();
+    }
+
     @SuppressWarnings("MagicNumber")
-    public String convertToRoman(Integer number) {
+    public static TreeMap<Integer, String> intToRoman() {
         TreeMap<Integer, String> intToRoman = new TreeMap<>();
         intToRoman.put(10, "X");
         intToRoman.put(1, "I");
@@ -21,17 +42,6 @@ public class Task4 {
         intToRoman.put(500, "D");
         intToRoman.put(900, "CM");
         intToRoman.put(1000, "M");
-        Integer newNumber = number;
-        StringBuilder stringBuilder = new StringBuilder();
-        while (newNumber > 0) {
-            for (var element: intToRoman.descendingKeySet()) {
-                if (newNumber >= element) {
-                    newNumber -= element;
-                    stringBuilder.append(intToRoman.get(element));
-                    break;
-                }
-            }
-        }
-        return stringBuilder.toString();
+        return intToRoman;
     }
 }

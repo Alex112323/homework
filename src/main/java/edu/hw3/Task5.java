@@ -33,7 +33,7 @@ public class Task5 {
         for (int i = 0; i < names.length; i++) {
             contactsSort[i] = new Task5(names[i]);
         }
-        if (sortingParameter.equals("DESC")) {
+        if ("DESC".equals(sortingParameter)) {
                 Arrays.sort(contactsSort, new ComparatorForContacts().reversed());
         } else {
             Arrays.sort(contactsSort, new ComparatorForContacts());
