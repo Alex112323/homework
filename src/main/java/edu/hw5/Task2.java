@@ -5,7 +5,9 @@ import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
+@SuppressWarnings("MagicNumber")
 public class Task2 {
+
     public List<LocalDate> allFridays13(int year) {
         List dates = new ArrayList<>();
         for (int i = 1; i <= 12; i++) {
@@ -16,7 +18,8 @@ public class Task2 {
         }
         return dates;
     }
-    public LocalDate nearesFriday13(LocalDate date) {
+
+    public LocalDate nearestFriday13(LocalDate date) {
         if (date.getDayOfMonth() == 13) {
             return date;
         }
